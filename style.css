@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+}
+
+.weather-app {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 950px; /* smaller width */
+  min-height: 600px; /* smaller height */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.search-container input {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #333;
+}
+
+.search-container button {
+  padding: 0 16px;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.search-container button:hover {
+  background: #574b90;
+}
+
+/* Current Weather */
+.current-weather {
+  text-align: center;
+}
+
+.current-weather h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: #2d3436;
+}
+
+.current-weather img {
+  width: 120px;
+  height: 120px;
+}
+
+.current-weather h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #0984e3;
+}
+
+.current-weather p {
+  color: #636e72;
+  font-size: 1.1rem;
+}
+
+/* Forecast Section */
+.forecast-section {
+  display: flex;
+  gap: 25px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+/* Today Card */
+.today-card {
+  flex: 1 1 220px; /* slightly wider */
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  border-radius: 15px;
+  padding: 14px; /* reduced padding for less height */
+  text-align: center;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+  color: white;
+  min-height: 180px; /* reduced height */
+}
+
+.today-card h4 {
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.today-card img {
+  width: 65px;
+  height: 65px;
+}
+
+.today-card p {
+  font-size: 0.95rem;
+}
+
+/* Six-Day Section */
+.six-day {
+  flex: 3 1 650px;
+}
+
+.six-day h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #2d3436;
+  font-size: 1.1rem;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+.forecast-day {
+  background: linear-gradient(135deg, #81ecec, #74b9ff);
+  border-radius: 16px;
+  padding: 14px 10px; /* less padding for reduced height */
+  text-align: center;
+  color: #2d3436;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  min-height: 150px; /* reduced height */
+}
+
+.forecast-day p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.forecast-day img {
+  width: 55px;
+  height: 55px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .forecast {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+
+

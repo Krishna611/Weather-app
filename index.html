@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="weather-app">
+    
+    <!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search for a city..." />
+      <button id="search-btn">🔍</button>
+    </div>
+
+    <!-- Current Weather -->
+    <div class="current-weather">
+      <h2 id="city-name">Loading...</h2>
+      <img id="weather-icon" src="" alt="Weather Icon" />
+      <h1 id="temperature">--°</h1>
+      <p id="description">--</p>
+      <p id="temp-range">H: --° | L: --°</p>
+    </div>
+
+    <!-- Today + 6-Day Forecast -->
+    <div class="forecast-section">
+      <!-- Today Card -->
+      <div class="today-card">
+        <h4>TODAY</h4>
+        <p id="today-temp">--° / --°</p>
+        <img id="today-icon" src="" alt="">
+        <p id="today-desc">--</p>
+      </div>
+
+      <!-- 6-Day Forecast -->
+      <div class="six-day">
+        <h4>6-DAYS FORECAST</h4>
+        <div class="forecast" id="forecast"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
